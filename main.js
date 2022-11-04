@@ -40,7 +40,7 @@ const traerPoke = async () => {
                 <img width="250px" src="${data.sprites.other.home.front_shiny}" class="img-result">
                 <div class="div-result-text">
                 <p>| Tipo: ${types} |</p>
-                <p>| Alto: ${heightResult}Mts |</p>
+                <p>| Alto: ${heightResult} Mts |</p>
                 <p>| Peso: ${peso}Kg |</p>
                 </div>
             </div>
