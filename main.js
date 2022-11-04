@@ -31,14 +31,18 @@ const traerPoke = async () => {
         if (id == data.id) {
             const peso = (data.weight) / 10;
             const nombre = data.name.toLocaleUpperCase();
-            const types = data.types.map(data => data.type.name).join(" | ").toLocaleUpperCase();
+            const types = data.types.map(data => data.type.name).join(", ").toLocaleUpperCase();
+            const heightResult = (data.height/10);
             const html =
                 `
             <div styles="display: flex; justify-content: center; aling-items: center;" class="div-value">
-                Nombre: ${nombre} || Id: ${id}
+                <p>| Nombre: ${nombre}  Id: ${id} |</p>
                 <img width="250px" src="${data.sprites.other.home.front_shiny}" class="img-result">
-                Tipo: | ${types} |
-                Peso: ${peso}Kg
+                <div class="div-result-text">
+                <p>| Tipo: ${types} |</p>
+                <p>| Alto: ${heightResult}Mts |</p>
+                <p>| Peso: ${peso}Kg |</p>
+                </div>
             </div>
             `
             div.innerHTML = html;
